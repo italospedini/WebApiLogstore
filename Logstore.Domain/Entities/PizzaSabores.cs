@@ -7,7 +7,7 @@ namespace Logstore.Domain.Entities
 {
     public class PizzaSabores : IEntityBase
     {
-        public Guid Id { get; private set; }
+        public int Id { get; private set; }
 
         public string NomeSabor { get; private set; }
 
@@ -27,7 +27,8 @@ namespace Logstore.Domain.Entities
 
         public PizzaSabores()
         {
-
+            this.Disponivel = true;
+            this.Ativa = true;
         }
     }
 }

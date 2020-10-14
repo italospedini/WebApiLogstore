@@ -7,11 +7,19 @@ namespace Logstore.Domain.Entities
 {
     public class Pizza : IEntityBase
     {
-        public Guid Id { get; private set; }
+        public int Id { get; private set; }
 
-        public PizzaSabores Sabor1 { get; private set; }
+        public int IdPizzaSabor1 { get; set; }
 
-        public PizzaSabores Sabor2 { get; private set; }
+        public PizzaSabores Sabor1 { get; set; }
+
+        public int? IdPizzaSabor2 { get; set; }
+
+        public virtual PizzaSabores Sabor2 { get; set; }
+
+        public int IdPedido { get; set; }
+
+        public virtual Pedido Pedido { get; set; }
 
         public decimal PrecoTotal
         {

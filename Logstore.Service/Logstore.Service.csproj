@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Logstore.Domain\Logstore.Domain.csproj" />
+    <ProjectReference Include="..\Logstore.Infra\Logstore.Infra.csproj" />
   </ItemGroup>
 
 </Project>

@@ -10,3 +10,5 @@ D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\obj\Debug\netcorea
 D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\obj\Debug\netcoreapp2.2\Logstore.Service.csproj.CopyComplete
 D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\obj\Debug\netcoreapp2.2\Logstore.Service.dll
 D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\obj\Debug\netcoreapp2.2\Logstore.Service.pdb
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\bin\Debug\netcoreapp2.2\Logstore.Infra.dll
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\bin\Debug\netcoreapp2.2\Logstore.Infra.pdb

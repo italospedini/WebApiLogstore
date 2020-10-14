@@ -8,15 +8,21 @@ namespace Logstore.Domain.Entities
 {
     public class Pedido : IEntityBase
     {
-        public Guid Id { get; private set; }
+        public int Id { get; private set; }
 
         public int NumeroPedido { get; private set; }
 
-        public ICollection<Pizza> Pizzas { get; private set; } = new List<Pizza>();
+        public int IdCliente { get; private set; }
+
+        public DateTime Data_Pedido { get; private set; }
+
+        public virtual ICollection<Pizza> Pizzas { get; private set; } = new List<Pizza>();
+
+        public Decimal ValorTotalPedido { get; private set; }
 
         public Pedido()
         {
-
+            this.Data_Pedido = DateTime.Now;
         }
 
         public bool PedidoValido()

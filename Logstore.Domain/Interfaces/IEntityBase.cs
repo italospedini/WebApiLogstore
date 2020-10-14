@@ -6,6 +6,6 @@ namespace Logstore.Domain.Interfaces
 {
     public interface IEntityBase
     {
-        Guid Id { get; }
+        int Id { get; }
     }
 }

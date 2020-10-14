@@ -1,0 +1,15 @@
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\bin\Debug\netcoreapp2.2\Logstore.Infra.deps.json
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\bin\Debug\netcoreapp2.2\Logstore.Infra.runtimeconfig.json
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\bin\Debug\netcoreapp2.2\Logstore.Infra.runtimeconfig.dev.json
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\bin\Debug\netcoreapp2.2\Logstore.Infra.dll
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\bin\Debug\netcoreapp2.2\Logstore.Infra.pdb
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\bin\Debug\netcoreapp2.2\Logstore.Domain.dll
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\bin\Debug\netcoreapp2.2\Logstore.Domain.pdb
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\obj\Debug\netcoreapp2.2\Logstore.Infra.csprojAssemblyReference.cache
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\obj\Debug\netcoreapp2.2\Logstore.Infra.AssemblyInfoInputs.cache
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\obj\Debug\netcoreapp2.2\Logstore.Infra.AssemblyInfo.cs
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\obj\Debug\netcoreapp2.2\Logstore.Infra.csproj.CoreCompileInputs.cache
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\obj\Debug\netcoreapp2.2\Logstore.Infra.csproj.CopyComplete
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\obj\Debug\netcoreapp2.2\Logstore.Infra.dll
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\obj\Debug\netcoreapp2.2\Logstore.Infra.pdb
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\obj\Debug\netcoreapp2.2\Logstore.Infra.genruntimeconfig.cache

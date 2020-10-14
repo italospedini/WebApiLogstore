@@ -13,6 +13,12 @@ namespace Logstore.Api.Models.Mappings.Pizza
         public PizzaMapping()
         {
             CreateMap<PizzaSabores, PizzaSaboresViewModel>();
+
+            CreateMap<PizzaSaboresViewModel, PizzaSabores>()
+                .ForMember(src => src.Ativa, opt => opt.Ignore())
+                .ForMember(src => src.Disponivel, opt => opt.Ignore());
+
+            CreateMap<Logstore.Domain.Entities.Pizza, PizzaViewModel>();
         }
     }
 }

@@ -8,6 +8,7 @@ namespace Logstore.Service.Interfaces.Pizza
 {
     public interface IPizzaService
     {
-        Task<ICollection<PizzaSabores>> GetCardapioPizzas();
+        Task<ICollection<PizzaSabores>> GetCardapio();
+        Task<PizzaSabores> Cadastrar(PizzaSabores pizza);
     }
 }
