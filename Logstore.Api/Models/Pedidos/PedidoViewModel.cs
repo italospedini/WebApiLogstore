@@ -12,7 +12,7 @@ namespace Logstore.Api.Models.Pedidos
 
         public int NumeroPedido { get; set; }
 
-        public int IdCliente { get; private set; }
+        public int IdCliente { get; set; }
 
         public DateTime Data_Pedido { get; set; }
 

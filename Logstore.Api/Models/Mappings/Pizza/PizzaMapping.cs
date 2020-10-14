@@ -19,6 +19,8 @@ namespace Logstore.Api.Models.Mappings.Pizza
                 .ForMember(src => src.Disponivel, opt => opt.Ignore());
 
             CreateMap<Logstore.Domain.Entities.Pizza, PizzaViewModel>();
+
+            CreateMap<PizzaViewModel, Logstore.Domain.Entities.Pizza>();
         }
     }
 }

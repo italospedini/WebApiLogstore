@@ -21,5 +21,20 @@ namespace Logstore.Service.Services.Pedidos
         {
             return await _pedidoRepository.GetHistorico(idcliente);
         }
+
+        async Task<Pedido> IPedidoService.Incluir(Pedido pedido)
+        {
+            bool pedidoValido = pedido.PedidoValido();
+
+            if (!pedidoValido)
+                return pedido;
+
+            pedido.CalcularValorTotalPedido();
+
+            Pedido result = await _pedidoRepository.Add(pedido);
+
+            return result;
+        }
+
     }
 }

@@ -13,6 +13,8 @@ namespace Logstore.Api.Models.Mappings.Pedidos
         public PedidoMapping()
         {
             CreateMap<Pedido, PedidoViewModel>();
+
+            CreateMap<PedidoViewModel, Pedido>();
         }
     }
 }

@@ -25,7 +25,7 @@ namespace Logstore.Domain.Entities
         {
             get
             {
-                if (this.Sabor2 != null)
+                if (this.Sabor2 == null)
                     return Sabor1.PrecoUnitario;
 
                 return this.Sabor1.PrecoUnitario / 2 + this.Sabor2.PrecoUnitario / 2;

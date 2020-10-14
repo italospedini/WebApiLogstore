@@ -29,5 +29,15 @@ namespace Logstore.Domain.Entities
         {
             return this.Pizzas.Count > 0 && this.Pizzas.Count <= 10;
         }
+
+        public void CalcularValorTotalPedido()
+        {
+            this.ValorTotalPedido = 0;
+
+            foreach (var pizza in this.Pizzas)
+            {
+                this.ValorTotalPedido += pizza.PrecoTotal;
+            }
+        }
     }
 }
