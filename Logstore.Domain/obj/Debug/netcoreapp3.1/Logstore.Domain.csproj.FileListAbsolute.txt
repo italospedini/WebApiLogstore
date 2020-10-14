@@ -2,3 +2,8 @@ D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Domain\obj\Debug\netcoreap
 D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Domain\obj\Debug\netcoreapp3.1\Logstore.Domain.AssemblyInfoInputs.cache
 D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Domain\obj\Debug\netcoreapp3.1\Logstore.Domain.AssemblyInfo.cs
 D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Domain\obj\Debug\netcoreapp3.1\Logstore.Domain.csproj.CoreCompileInputs.cache
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Domain\bin\Debug\netcoreapp3.1\Logstore.Domain.deps.json
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Domain\bin\Debug\netcoreapp3.1\Logstore.Domain.dll
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Domain\bin\Debug\netcoreapp3.1\Logstore.Domain.pdb
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Domain\obj\Debug\netcoreapp3.1\Logstore.Domain.dll
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Domain\obj\Debug\netcoreapp3.1\Logstore.Domain.pdb

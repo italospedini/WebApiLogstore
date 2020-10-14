@@ -1,10 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "jjR+ZVfvgOM0KsxqmPGTnCVZNZQNzD+OX5jWk7LzuRbFPm0DuPM5SNjFuwInpPMqNnBKIdoQPWzZCdsbrnfq4Q==",
+  "dgSpecHash": "G8/q3mCs/zh4SkbVu6rUoUbxfFTsRZSJrhafgs2pmzWzPX7o3zZtihPw9i2wnZ3b9m1sj+maMtVYh/F9q+sQ9w==",
   "success": true,
   "projectFilePath": "D:\\3. PROJETOS\\WebApiLogStore\\WebApiLogstore\\Logstore.Infra\\Logstore.Infra.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\italo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+    "C:\\Users\\italo\\.nuget\\packages\\microsoft.netcore.app\\2.2.0\\microsoft.netcore.app.2.2.0.nupkg.sha512",
+    "C:\\Users\\italo\\.nuget\\packages\\microsoft.netcore.dotnetapphost\\2.2.0\\microsoft.netcore.dotnetapphost.2.2.0.nupkg.sha512",
+    "C:\\Users\\italo\\.nuget\\packages\\microsoft.netcore.dotnethostpolicy\\2.2.0\\microsoft.netcore.dotnethostpolicy.2.2.0.nupkg.sha512",
+    "C:\\Users\\italo\\.nuget\\packages\\microsoft.netcore.dotnethostresolver\\2.2.0\\microsoft.netcore.dotnethostresolver.2.2.0.nupkg.sha512",
+    "C:\\Users\\italo\\.nuget\\packages\\microsoft.netcore.platforms\\2.2.0\\microsoft.netcore.platforms.2.2.0.nupkg.sha512",
+    "C:\\Users\\italo\\.nuget\\packages\\microsoft.netcore.targets\\2.0.0\\microsoft.netcore.targets.2.0.0.nupkg.sha512",
+    "C:\\Users\\italo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

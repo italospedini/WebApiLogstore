@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "Logstore.Service/1.0.0": {
+        "dependencies": {
+          "Logstore.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Logstore.Service.dll": {}
+        }
+      },
+      "Logstore.Domain/1.0.0": {
+        "runtime": {
+          "Logstore.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Logstore.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Logstore.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

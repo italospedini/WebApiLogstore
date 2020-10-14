@@ -1,0 +1,12 @@
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\bin\Debug\netcoreapp2.2\Logstore.Service.deps.json
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\bin\Debug\netcoreapp2.2\Logstore.Service.dll
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\bin\Debug\netcoreapp2.2\Logstore.Service.pdb
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\bin\Debug\netcoreapp2.2\Logstore.Domain.dll
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\bin\Debug\netcoreapp2.2\Logstore.Domain.pdb
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\obj\Debug\netcoreapp2.2\Logstore.Service.csprojAssemblyReference.cache
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\obj\Debug\netcoreapp2.2\Logstore.Service.AssemblyInfoInputs.cache
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\obj\Debug\netcoreapp2.2\Logstore.Service.AssemblyInfo.cs
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\obj\Debug\netcoreapp2.2\Logstore.Service.csproj.CoreCompileInputs.cache
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\obj\Debug\netcoreapp2.2\Logstore.Service.csproj.CopyComplete
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\obj\Debug\netcoreapp2.2\Logstore.Service.dll
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\obj\Debug\netcoreapp2.2\Logstore.Service.pdb

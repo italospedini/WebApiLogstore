@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logstore.Api", "Logstore.Api.csproj", "{67551AD8-E02D-4DA8-B492-F519ECBAAF54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logstore.Api", "Logstore.Api.csproj", "{67551AD8-E02D-4DA8-B492-F519ECBAAF54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logstore.Domain", "..\Logstore.Domain\Logstore.Domain.csproj", "{97F3049D-7683-4087-BBF7-D2B7176FC65C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logstore.Domain", "..\Logstore.Domain\Logstore.Domain.csproj", "{97F3049D-7683-4087-BBF7-D2B7176FC65C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logstore.Infra", "..\Logstore.Infra\Logstore.Infra.csproj", "{485FB4A4-0698-4872-AD7E-8102EEB37A05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logstore.Infra", "..\Logstore.Infra\Logstore.Infra.csproj", "{485FB4A4-0698-4872-AD7E-8102EEB37A05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logstore.Service", "..\Logstore.Service\Logstore.Service.csproj", "{672AE39F-C2BC-4667-90B7-3827D2547701}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logstore.Service", "..\Logstore.Service\Logstore.Service.csproj", "{672AE39F-C2BC-4667-90B7-3827D2547701}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logstore.Crosscutting", "..\Logstore.Crosscutting\Logstore.Crosscutting.csproj", "{456E5719-1A68-4CCB-89E7-564DB32F89AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{672AE39F-C2BC-4667-90B7-3827D2547701}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{672AE39F-C2BC-4667-90B7-3827D2547701}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{672AE39F-C2BC-4667-90B7-3827D2547701}.Release|Any CPU.Build.0 = Release|Any CPU
+		{456E5719-1A68-4CCB-89E7-564DB32F89AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{456E5719-1A68-4CCB-89E7-564DB32F89AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{456E5719-1A68-4CCB-89E7-564DB32F89AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{456E5719-1A68-4CCB-89E7-564DB32F89AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

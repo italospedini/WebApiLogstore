@@ -1,0 +1,14 @@
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Crosscutting\bin\Debug\netcoreapp2.2\Logstore.Crosscutting.deps.json
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Crosscutting\bin\Debug\netcoreapp2.2\Logstore.Crosscutting.dll
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Crosscutting\obj\Debug\netcoreapp2.2\Logstore.Crosscutting.AssemblyInfoInputs.cache
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Crosscutting\obj\Debug\netcoreapp2.2\Logstore.Crosscutting.AssemblyInfo.cs
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Crosscutting\obj\Debug\netcoreapp2.2\Logstore.Crosscutting.csprojAssemblyReference.cache
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Crosscutting\bin\Debug\netcoreapp2.2\Logstore.Crosscutting.pdb
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Crosscutting\bin\Debug\netcoreapp2.2\Logstore.Domain.dll
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Crosscutting\bin\Debug\netcoreapp2.2\Logstore.Service.dll
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Crosscutting\bin\Debug\netcoreapp2.2\Logstore.Service.pdb
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Crosscutting\bin\Debug\netcoreapp2.2\Logstore.Domain.pdb
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Crosscutting\obj\Debug\netcoreapp2.2\Logstore.Crosscutting.csproj.CoreCompileInputs.cache
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Crosscutting\obj\Debug\netcoreapp2.2\Logstore.Crosscutting.csproj.CopyComplete
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Crosscutting\obj\Debug\netcoreapp2.2\Logstore.Crosscutting.dll
+D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Crosscutting\obj\Debug\netcoreapp2.2\Logstore.Crosscutting.pdb
