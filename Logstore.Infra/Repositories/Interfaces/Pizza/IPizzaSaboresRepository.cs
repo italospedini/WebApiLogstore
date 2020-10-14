@@ -10,5 +10,6 @@ namespace Logstore.Infra.Repositories.Interfaces.Pizza
     public interface IPizzaSaboresRepository : IBaseRepository<PizzaSabores>
     {
         Task<ICollection<PizzaSabores>> GetCardapio();
+        Task<ICollection<PizzaSabores>> GetPizzasByIds(IEnumerable<int> idsPizzas);
     }
 }

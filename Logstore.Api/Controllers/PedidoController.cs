@@ -51,9 +51,9 @@ namespace Logstore.Api.Controllers
                 return BadRequest(new ApiResponse(StatusCodes.Status400BadRequest, "Modelo inválido"));
             }
 
-            await _pedidoService.Incluir(_mapper.Map<Pedido>(pedidoViewModel));
+            PedidoViewModel result = _mapper.Map<PedidoViewModel>(await _pedidoService.Incluir(_mapper.Map<Pedido>(pedidoViewModel)));
 
-            return pedidoViewModel;
+            return result;
         }
     }
 }

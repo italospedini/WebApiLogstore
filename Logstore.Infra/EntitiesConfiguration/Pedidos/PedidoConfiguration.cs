@@ -16,7 +16,7 @@ namespace Logstore.Infra.EntitiesConfiguration.Pedidos
             builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
-            builder.Property(x => x.IdCliente).IsRequired();
+            builder.Property(x => x.IdCliente).IsRequired().ValueGeneratedOnAdd();
             builder.Property(x => x.NumeroPedido).IsRequired();
             builder.Property(x => x.Data_Pedido).IsRequired();
             builder.Property(x => x.ValorTotalPedido).IsRequired();

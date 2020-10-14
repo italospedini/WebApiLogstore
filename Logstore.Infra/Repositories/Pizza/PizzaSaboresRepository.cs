@@ -27,5 +27,14 @@ namespace Logstore.Infra.Repositories.Pizza
                             .Where(x => x.Ativa)
                             .ToListAsync();
         }
+
+        async Task<ICollection<PizzaSabores>> IPizzaSaboresRepository.GetPizzasByIds(IEnumerable<int> idsPizzas)
+        {
+            return await _context.PizzaSabores
+                            .AsNoTracking()
+                            .Where(x => idsPizzas.Contains(x.Id))
+                            .ToListAsync();
+        }
+
     }
 }

@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Logstore.Infra.Migrations
 {
     [DbContext(typeof(LogstoreDbContext))]
-    [Migration("20201014202727_New Entities")]
-    partial class NewEntities
+    [Migration("20201014225557_Pedido")]
+    partial class Pedido
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,7 +26,8 @@ namespace Logstore.Infra.Migrations
 
                     b.Property<DateTime>("Data_Pedido");
 
-                    b.Property<int>("IdCliente");
+                    b.Property<int>("IdCliente")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<int>("NumeroPedido");
 
@@ -46,9 +47,7 @@ namespace Logstore.Infra.Migrations
 
                     b.Property<int>("IdPizzaSabor1");
 
-                    b.Property<int>("IdPizzaSabor2");
-
-                    b.Property<int?>("Sabor2Id");
+                    b.Property<int?>("IdPizzaSabor2");
 
                     b.HasKey("Id");
 
@@ -56,7 +55,7 @@ namespace Logstore.Infra.Migrations
 
                     b.HasIndex("IdPizzaSabor1");
 
-                    b.HasIndex("Sabor2Id");
+                    b.HasIndex("IdPizzaSabor2");
 
                     b.ToTable("Pizza");
                 });
@@ -94,7 +93,7 @@ namespace Logstore.Infra.Migrations
 
                     b.HasOne("Logstore.Domain.Entities.PizzaSabores", "Sabor2")
                         .WithMany()
-                        .HasForeignKey("Sabor2Id");
+                        .HasForeignKey("IdPizzaSabor2");
                 });
 #pragma warning restore 612, 618
         }
