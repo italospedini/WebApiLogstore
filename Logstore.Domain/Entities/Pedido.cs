@@ -15,21 +15,22 @@ namespace Logstore.Domain.Entities
 
         public int IdCliente { get; private set; }
 
+        public Cliente Cliente { get; private set; }
+
         public DateTime Data_Pedido { get; private set; }
 
         public virtual ICollection<Pizza> Pizzas { get; private set; } = new List<Pizza>();
 
         public Decimal ValorTotalPedido { get; private set; }
 
+        public string Endereco_Entrega { get; private set; }
+
         public Pedido()
         {
             
         }
 
-        public bool PedidoValido()
-        {
-            return this.Pizzas.Count > 0 && this.Pizzas.Count <= 10;
-        }
+        public bool PedidoValido() => this.Pizzas.Count > 0 && this.Pizzas.Count <= 10;
 
         public void CalcularValorTotal(ICollection<PizzaSabores> pizzas)
         {
@@ -45,10 +46,9 @@ namespace Logstore.Domain.Entities
             }
         }
 
-        public void Criar()
-        {
-            this.Data_Pedido = DateTime.Now;
-        }
+        public void Criar() => this.Data_Pedido = DateTime.Now;
+
+        public void SetCliente(int idCliente) => this.IdCliente = idCliente;
 
     }
 }

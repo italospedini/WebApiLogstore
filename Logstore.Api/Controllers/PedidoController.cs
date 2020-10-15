@@ -55,7 +55,7 @@ namespace Logstore.Api.Controllers
         {
             try
             {
-                if (!ModelState.IsValid)
+                if (!ModelState.IsValid || !pedidoViewModel.ModelIsValid())
                 {
                     return new ObjectResult("Modelo inválido") { StatusCode = StatusCodes.Status400BadRequest, Value = "Modelo inválido" };
                 }

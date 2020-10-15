@@ -3,12 +3,27 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Logstore.Infra.Migrations
 {
-    public partial class Pedido : Migration
+    public partial class PedidoeCliente : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Pedido",
+                name: "Clientes",
+                schema: "LogstoreAPI",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Nome = table.Column<string>(nullable: true),
+                    Endereco_Entrega = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Clientes", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Pedidos",
                 schema: "LogstoreAPI",
                 columns: table => new
                 {
@@ -16,15 +31,23 @@ namespace Logstore.Infra.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     IdCliente = table.Column<int>(nullable: false),
                     Data_Pedido = table.Column<DateTime>(nullable: false),
-                    ValorTotalPedido = table.Column<decimal>(nullable: false)
+                    ValorTotalPedido = table.Column<decimal>(nullable: false),
+                    Endereco_Entrega = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Pedido", x => x.Id);
+                    table.PrimaryKey("PK_Pedidos", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Pedidos_Clientes_IdCliente",
+                        column: x => x.IdCliente,
+                        principalSchema: "LogstoreAPI",
+                        principalTable: "Clientes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Pizza",
+                name: "Pizzas",
                 schema: "LogstoreAPI",
                 columns: table => new
                 {
@@ -36,23 +59,23 @@ namespace Logstore.Infra.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Pizza", x => x.Id);
+                    table.PrimaryKey("PK_Pizzas", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Pizza_Pedido_IdPedido",
+                        name: "FK_Pizzas_Pedidos_IdPedido",
                         column: x => x.IdPedido,
                         principalSchema: "LogstoreAPI",
-                        principalTable: "Pedido",
+                        principalTable: "Pedidos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Pizza_PizzaSabores_IdPizzaSabor1",
+                        name: "FK_Pizzas_PizzaSabores_IdPizzaSabor1",
                         column: x => x.IdPizzaSabor1,
                         principalSchema: "LogstoreAPI",
                         principalTable: "PizzaSabores",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Pizza_PizzaSabores_IdPizzaSabor2",
+                        name: "FK_Pizzas_PizzaSabores_IdPizzaSabor2",
                         column: x => x.IdPizzaSabor2,
                         principalSchema: "LogstoreAPI",
                         principalTable: "PizzaSabores",
@@ -61,32 +84,42 @@ namespace Logstore.Infra.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Pizza_IdPedido",
+                name: "IX_Pedidos_IdCliente",
                 schema: "LogstoreAPI",
-                table: "Pizza",
+                table: "Pedidos",
+                column: "IdCliente");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Pizzas_IdPedido",
+                schema: "LogstoreAPI",
+                table: "Pizzas",
                 column: "IdPedido");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Pizza_IdPizzaSabor1",
+                name: "IX_Pizzas_IdPizzaSabor1",
                 schema: "LogstoreAPI",
-                table: "Pizza",
+                table: "Pizzas",
                 column: "IdPizzaSabor1");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Pizza_IdPizzaSabor2",
+                name: "IX_Pizzas_IdPizzaSabor2",
                 schema: "LogstoreAPI",
-                table: "Pizza",
+                table: "Pizzas",
                 column: "IdPizzaSabor2");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Pizza",
+                name: "Pizzas",
                 schema: "LogstoreAPI");
 
             migrationBuilder.DropTable(
-                name: "Pedido",
+                name: "Pedidos",
+                schema: "LogstoreAPI");
+
+            migrationBuilder.DropTable(
+                name: "Clientes",
                 schema: "LogstoreAPI");
         }
     }

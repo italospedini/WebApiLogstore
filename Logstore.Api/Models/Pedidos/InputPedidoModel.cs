@@ -9,10 +9,22 @@ using System.Threading.Tasks;
 namespace Logstore.Api.Models.Pedidos
 {
     public class InputPedidoModel
-    {
-        [Required]
+    {   
         public int IdCliente { get; set; }
 
+        public string Endereco_Entrega { get; set; }
+
         public ICollection<InputPizzaPedidoModel> Pizzas { get; set; } = new List<InputPizzaPedidoModel>();
+
+        public bool ModelIsValid()
+        {
+            if (IdCliente > 0)
+                return true;
+
+            if (string.IsNullOrWhiteSpace(Endereco_Entrega))
+                return false;
+
+            return true;
+        }
     }
 }

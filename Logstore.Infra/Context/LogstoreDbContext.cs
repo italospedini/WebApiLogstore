@@ -22,5 +22,6 @@ namespace Logstore.Infra.Context
 
         public DbSet<PizzaSabores> PizzaSabores { get; set; }
         public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
     }
 }

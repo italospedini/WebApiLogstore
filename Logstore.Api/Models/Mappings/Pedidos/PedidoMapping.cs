@@ -16,12 +16,15 @@ namespace Logstore.Api.Models.Mappings.Pedidos
                 .ForMember(to => to.NumeroPedido, opt => opt.MapFrom(src => src.Id));
 
             CreateMap<PedidoViewModel, Pedido>()
-                .ForMember(to => to.Id, opt => opt.Ignore());
+                .ForMember(to => to.Id, opt => opt.Ignore())
+                .ForMember(to => to.Endereco_Entrega, opt => opt.Ignore())
+                .ForMember(to => to.Cliente, opt => opt.Ignore());
 
             CreateMap<InputPedidoModel, Pedido>()
                 .ForMember(to => to.Id, opt => opt.Ignore())
                 .ForMember(to => to.Data_Pedido, opt => opt.Ignore())
-                .ForMember(to => to.ValorTotalPedido, opt => opt.Ignore());
+                .ForMember(to => to.ValorTotalPedido, opt => opt.Ignore())
+                .ForMember(to => to.Cliente, opt => opt.Ignore());
         }
     }
 }

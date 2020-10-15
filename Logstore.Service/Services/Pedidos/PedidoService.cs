@@ -1,4 +1,5 @@
 ﻿using Logstore.Domain.Entities;
+using Logstore.Infra.Repositories.Interfaces.Clientes;
 using Logstore.Infra.Repositories.Interfaces.Pedidos;
 using Logstore.Infra.Repositories.Interfaces.Pizza;
 using Logstore.Service.Interfaces.Pedidos;
@@ -14,12 +15,15 @@ namespace Logstore.Service.Services.Pedidos
     {
         private readonly IPedidoRepository _pedidoRepository;
         private readonly IPizzaSaboresRepository _pizzaSaboresRepository;
+        private readonly IClienteRepository _clienteRepository;
 
         public PedidoService(IPedidoRepository pedidoRepository,
-                            IPizzaSaboresRepository pizzaSaboresRepository)
+                            IPizzaSaboresRepository pizzaSaboresRepository,
+                            IClienteRepository clienteRepository)
         {
             this._pedidoRepository = pedidoRepository;
             this._pizzaSaboresRepository = pizzaSaboresRepository;
+            this._clienteRepository = clienteRepository;
         }
 
         async Task<ICollection<Pedido>> IPedidoService.GetHistorico(int idcliente)
@@ -39,6 +43,15 @@ namespace Logstore.Service.Services.Pedidos
 
             if (pizzas.Count != IdsPizzas.Count())
                 return -2; // Id de pizza inexistente
+
+            bool clienteExiste = await _clienteRepository.ClienteExiste(pedido.IdCliente);
+
+            if (!clienteExiste)
+            {
+                Cliente newCliente = new Cliente(pedido.Endereco_Entrega);
+                Cliente cliente = await _clienteRepository.Add(newCliente);
+                pedido.SetCliente(cliente.Id);
+            }
 
             pedido.CalcularValorTotal(pizzas);
             pedido.Criar();

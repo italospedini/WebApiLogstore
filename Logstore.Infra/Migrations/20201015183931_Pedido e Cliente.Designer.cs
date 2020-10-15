@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Logstore.Infra.Migrations
 {
     [DbContext(typeof(LogstoreDbContext))]
-    [Migration("20201015171555_Pedido")]
-    partial class Pedido
+    [Migration("20201015183931_Pedido e Cliente")]
+    partial class PedidoeCliente
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,6 +19,21 @@ namespace Logstore.Infra.Migrations
                 .HasDefaultSchema("LogstoreAPI")
                 .HasAnnotation("ProductVersion", "2.2.0-rtm-35687");
 
+            modelBuilder.Entity("Logstore.Domain.Entities.Cliente", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Endereco_Entrega")
+                        .IsRequired();
+
+                    b.Property<string>("Nome");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Clientes");
+                });
+
             modelBuilder.Entity("Logstore.Domain.Entities.Pedido", b =>
                 {
                     b.Property<int>("Id")
@@ -26,13 +41,17 @@ namespace Logstore.Infra.Migrations
 
                     b.Property<DateTime>("Data_Pedido");
 
+                    b.Property<string>("Endereco_Entrega");
+
                     b.Property<int>("IdCliente");
 
                     b.Property<decimal>("ValorTotalPedido");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Pedido");
+                    b.HasIndex("IdCliente");
+
+                    b.ToTable("Pedidos");
                 });
 
             modelBuilder.Entity("Logstore.Domain.Entities.Pizza", b =>
@@ -54,7 +73,7 @@ namespace Logstore.Infra.Migrations
 
                     b.HasIndex("IdPizzaSabor2");
 
-                    b.ToTable("Pizza");
+                    b.ToTable("Pizzas");
                 });
 
             modelBuilder.Entity("Logstore.Domain.Entities.PizzaSabores", b =>
@@ -74,6 +93,14 @@ namespace Logstore.Infra.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("PizzaSabores");
+                });
+
+            modelBuilder.Entity("Logstore.Domain.Entities.Pedido", b =>
+                {
+                    b.HasOne("Logstore.Domain.Entities.Cliente", "Cliente")
+                        .WithMany()
+                        .HasForeignKey("IdCliente")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Logstore.Domain.Entities.Pizza", b =>

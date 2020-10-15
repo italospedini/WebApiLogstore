@@ -10,7 +10,7 @@ namespace Logstore.Infra.EntitiesConfiguration.Pizza
     {
         public void Configure(EntityTypeBuilder<Logstore.Domain.Entities.Pizza> builder)
         {
-            builder.ToTable("Pizza");
+            builder.ToTable("Pizzas");
 
             builder.HasKey(x => x.Id);
 

@@ -1,4 +1,6 @@
 ﻿using Logstore.Infra.Context;
+using Logstore.Infra.Repositories.Clientes;
+using Logstore.Infra.Repositories.Interfaces.Clientes;
 using Logstore.Infra.Repositories.Interfaces.Pedidos;
 using Logstore.Infra.Repositories.Interfaces.Pizza;
 using Logstore.Infra.Repositories.Pedidos;
@@ -27,6 +29,7 @@ namespace Logstore.Crosscutting.DI
 
             services.AddScoped(typeof(IPizzaSaboresRepository), typeof(PizzaSaboresRepository));
             services.AddScoped(typeof(IPedidoRepository), typeof(PedidoRepository));
+            services.AddScoped(typeof(IClienteRepository), typeof(ClienteRepository));
 
             string AppPath = Environment.CurrentDirectory;
             string SqliteDbPath = Path.Combine(Directory.GetParent(AppPath).FullName, "Logstore.Infra", "LogstoreAPI.db");
