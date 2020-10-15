@@ -6,7 +6,6 @@ using AutoMapper;
 using Logstore.Api.Models.Pedidos;
 using Logstore.Api.Models.Pizza;
 using Logstore.Domain.Entities;
-using Logstore.Service.ApiResponse;
 using Logstore.Service.Interfaces.Pedidos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -32,34 +31,50 @@ namespace Logstore.Api.Controllers
         [HttpGet()]
         [Route("Historico/{idCliente}")]
         [SwaggerResponse(StatusCodes.Status200OK, Description = "Histórico de pedidos do cliente retornado", Type = typeof(PedidoViewModel))]
-        [SwaggerResponse(StatusCodes.Status404NotFound, Description = "Method not found", Type = typeof(PedidoViewModel))]
-        [SwaggerResponse(StatusCodes.Status500InternalServerError, Description = "Error at server", Type = typeof(PedidoViewModel))]
+        [SwaggerResponse(StatusCodes.Status404NotFound, Description = "Method not found", Type = typeof(ObjectResult))]
+        [SwaggerResponse(StatusCodes.Status500InternalServerError, Description = "Error at server", Type = typeof(ObjectResult))]
         public async Task<ActionResult<ICollection<PedidoViewModel>>> GetHistorico([FromRoute] int idCliente)
         {
-            return Ok(_mapper.Map<List<PedidoViewModel>>(await _pedidoService.GetHistorico(idCliente)));
+            try
+            {
+                return Ok(_mapper.Map<List<PedidoViewModel>>(await _pedidoService.GetHistorico(idCliente)));
+            }
+            catch (Exception ex)
+            {
+                return new ObjectResult(ex) { StatusCode = StatusCodes.Status500InternalServerError, Value = ex.Message };
+            }
         }
 
         [HttpPost()]
         [Route("Incluir")]
         [SwaggerResponse(StatusCodes.Status200OK, Description = "Pedido incluído", Type = typeof(PedidoViewModel))]
-        [SwaggerResponse(StatusCodes.Status400BadRequest, Description = "Modelo de pedido inválido", Type = typeof(PedidoViewModel))]
-        [SwaggerResponse(StatusCodes.Status404NotFound, Description = "Method not found", Type = typeof(PedidoViewModel))]
-        [SwaggerResponse(StatusCodes.Status500InternalServerError, Description = "Error at server", Type = typeof(PedidoViewModel))]
+        [SwaggerResponse(StatusCodes.Status400BadRequest, Description = "Modelo de pedido inválido", Type = typeof(ObjectResult))]
+        [SwaggerResponse(StatusCodes.Status404NotFound, Description = "Method not found", Type = typeof(ObjectResult))]
+        [SwaggerResponse(StatusCodes.Status500InternalServerError, Description = "Error at server", Type = typeof(ObjectResult))]
         public async Task<ActionResult<PedidoViewModel>> Incluir([FromBody] InputPedidoModel pedidoViewModel)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                return BadRequest(new ApiResponse(StatusCodes.Status400BadRequest, "Modelo inválido"));
+                if (!ModelState.IsValid)
+                {
+                    return new ObjectResult("Modelo inválido") { StatusCode = StatusCodes.Status400BadRequest, Value = "Modelo inválido" };
+                }
+
+                int numeroPedido = await _pedidoService.Incluir(_mapper.Map<Pedido>(pedidoViewModel));
+
+                if (numeroPedido == -1)
+                    return new ObjectResult("Modelo inválido") { StatusCode = StatusCodes.Status400BadRequest, Value = "Modelo inválido" };
+                else if (numeroPedido == -2)
+                    return new ObjectResult("Pizza inexistente") { StatusCode = StatusCodes.Status400BadRequest, Value = "Pizza inexistente" };
+
+                PedidoViewModel pedido = _mapper.Map<PedidoViewModel>(await _pedidoService.GetByNumeroPedido(numeroPedido));
+
+                return Ok(pedido);
             }
-
-            int numeroPedido = await _pedidoService.Incluir(_mapper.Map<Pedido>(pedidoViewModel));
-
-            if (numeroPedido == -1)
-                return BadRequest(new ApiResponse(StatusCodes.Status400BadRequest, "Modelo inválido"));
-
-            PedidoViewModel pedido = _mapper.Map<PedidoViewModel>(await _pedidoService.GetByNumeroPedido(numeroPedido));
-
-            return Ok(pedido);
+            catch (Exception ex)
+            {
+                return new ObjectResult(ex) { StatusCode = StatusCodes.Status500InternalServerError, Value = ex.Message };
+            }
         }
     }
 }

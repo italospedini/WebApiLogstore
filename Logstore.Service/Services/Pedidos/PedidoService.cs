@@ -34,7 +34,11 @@ namespace Logstore.Service.Services.Pedidos
             if (!pedidoValido)
                 return -1;
 
-            ICollection<PizzaSabores> pizzas = await GetPizzas(pedido.Pizzas.Select(x => x.IdPizzaSabor1).Union(pedido.Pizzas.Where(x => x.IdPizzaSabor2 != null).Select(x =>  x.IdPizzaSabor2.Value)));
+            IEnumerable<int> IdsPizzas = pedido.Pizzas.Select(x => x.IdPizzaSabor1).Union(pedido.Pizzas.Where(x => x.IdPizzaSabor2 != null).Select(x => x.IdPizzaSabor2.Value));
+            ICollection<PizzaSabores> pizzas = await GetPizzas(IdsPizzas);
+
+            if (pizzas.Count != IdsPizzas.Count())
+                return -2; // Id de pizza inexistente
 
             pedido.CalcularValorTotal(pizzas);
             pedido.Criar();
