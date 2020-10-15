@@ -42,18 +42,24 @@ namespace Logstore.Api.Controllers
         [HttpPost()]
         [Route("Incluir")]
         [SwaggerResponse(StatusCodes.Status200OK, Description = "Pedido incluído", Type = typeof(PedidoViewModel))]
+        [SwaggerResponse(StatusCodes.Status400BadRequest, Description = "Modelo de pedido inválido", Type = typeof(PedidoViewModel))]
         [SwaggerResponse(StatusCodes.Status404NotFound, Description = "Method not found", Type = typeof(PedidoViewModel))]
         [SwaggerResponse(StatusCodes.Status500InternalServerError, Description = "Error at server", Type = typeof(PedidoViewModel))]
-        public async Task<ActionResult<PedidoViewModel>> Incluir([FromBody] PedidoViewModel pedidoViewModel)
+        public async Task<ActionResult<PedidoViewModel>> Incluir([FromBody] InputPedidoModel pedidoViewModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(new ApiResponse(StatusCodes.Status400BadRequest, "Modelo inválido"));
             }
 
-            PedidoViewModel result = _mapper.Map<PedidoViewModel>(await _pedidoService.Incluir(_mapper.Map<Pedido>(pedidoViewModel)));
+            int numeroPedido = await _pedidoService.Incluir(_mapper.Map<Pedido>(pedidoViewModel));
 
-            return result;
+            if (numeroPedido == -1)
+                return BadRequest(new ApiResponse(StatusCodes.Status400BadRequest, "Modelo inválido"));
+
+            PedidoViewModel pedido = _mapper.Map<PedidoViewModel>(await _pedidoService.GetByNumeroPedido(numeroPedido));
+
+            return Ok(pedido);
         }
     }
 }

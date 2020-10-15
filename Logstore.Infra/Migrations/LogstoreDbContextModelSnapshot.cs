@@ -24,10 +24,7 @@ namespace Logstore.Infra.Migrations
 
                     b.Property<DateTime>("Data_Pedido");
 
-                    b.Property<int>("IdCliente")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("NumeroPedido");
+                    b.Property<int>("IdCliente");
 
                     b.Property<decimal>("ValorTotalPedido");
 

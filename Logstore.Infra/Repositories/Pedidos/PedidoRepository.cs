@@ -29,5 +29,16 @@ namespace Logstore.Infra.Repositories.Pedidos
                             .Where(x => x.IdCliente.Equals(idCliente))
                             .ToListAsync();
         }
+
+        async Task<Pedido> IPedidoRepository.GetByNumeroPedido(int numeroPedido)
+        {
+            return await _context.Pedidos
+                            .AsNoTracking()
+                            .Include(x => x.Pizzas).ThenInclude(x => x.Sabor1)
+                            .Include(x => x.Pizzas).ThenInclude(x => x.Sabor2)
+                            .Where(x => x.Id.Equals(numeroPedido))
+                            .FirstOrDefaultAsync();
+        }
+
     }
 }

@@ -27,12 +27,12 @@ namespace Logstore.Service.Services.Pedidos
             return await _pedidoRepository.GetHistorico(idcliente);
         }
 
-        async Task<Pedido> IPedidoService.Incluir(Pedido pedido)
+        async Task<int> IPedidoService.Incluir(Pedido pedido)
         {
             bool pedidoValido = pedido.PedidoValido();
 
             if (!pedidoValido)
-                return pedido;
+                return -1;
 
             ICollection<PizzaSabores> pizzas = await GetPizzas(pedido.Pizzas.Select(x => x.IdPizzaSabor1).Union(pedido.Pizzas.Where(x => x.IdPizzaSabor2 != null).Select(x =>  x.IdPizzaSabor2.Value)));
 
@@ -41,12 +41,17 @@ namespace Logstore.Service.Services.Pedidos
 
             Pedido result = await _pedidoRepository.Add(pedido);
 
-            return result;
+            return result.Id;
         }
 
         private async Task<ICollection<PizzaSabores>> GetPizzas(IEnumerable<int> idsPizzas)
         {
             return await _pizzaSaboresRepository.GetPizzasByIds(idsPizzas);
+        }
+
+        async Task<Pedido> IPedidoService.GetByNumeroPedido(int numeroPedido)
+        {
+            return await _pedidoRepository.GetByNumeroPedido(numeroPedido);
         }
 
     }

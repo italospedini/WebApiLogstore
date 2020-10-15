@@ -20,7 +20,5 @@ namespace Logstore.Api.Models.Pizza
 
         public int IdPedido { get; set; }
 
-        public PedidoViewModel Pedido { get; set; }
-
     }
 }

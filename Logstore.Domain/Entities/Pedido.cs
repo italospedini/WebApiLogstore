@@ -8,9 +8,10 @@ namespace Logstore.Domain.Entities
 {
     public class Pedido : IEntityBase
     {
+        /// <summary>
+        /// Numero do Pedido
+        /// </summary>
         public int Id { get; private set; }
-
-        public int NumeroPedido { get; private set; }
 
         public int IdCliente { get; private set; }
 

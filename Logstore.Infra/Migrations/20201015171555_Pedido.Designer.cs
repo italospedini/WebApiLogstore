@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Logstore.Infra.Migrations
 {
     [DbContext(typeof(LogstoreDbContext))]
-    [Migration("20201014225557_Pedido")]
+    [Migration("20201015171555_Pedido")]
     partial class Pedido
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,10 +26,7 @@ namespace Logstore.Infra.Migrations
 
                     b.Property<DateTime>("Data_Pedido");
 
-                    b.Property<int>("IdCliente")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("NumeroPedido");
+                    b.Property<int>("IdCliente");
 
                     b.Property<decimal>("ValorTotalPedido");
 

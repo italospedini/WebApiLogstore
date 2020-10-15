@@ -10,6 +10,8 @@ namespace Logstore.Service.Interfaces.Pedidos
     {
         Task<ICollection<Pedido>> GetHistorico(int idcliente);
 
-        Task<Pedido> Incluir(Pedido pedido);
+        Task<int> Incluir(Pedido pedido);
+
+        Task<Pedido> GetByNumeroPedido(int numeroPedido);
     }
 }

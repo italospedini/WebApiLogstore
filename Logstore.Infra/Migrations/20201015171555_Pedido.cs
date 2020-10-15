@@ -14,9 +14,7 @@ namespace Logstore.Infra.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    NumeroPedido = table.Column<int>(nullable: false),
-                    IdCliente = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                    IdCliente = table.Column<int>(nullable: false),
                     Data_Pedido = table.Column<DateTime>(nullable: false),
                     ValorTotalPedido = table.Column<decimal>(nullable: false)
                 },

@@ -8,8 +8,6 @@ namespace Logstore.Api.Models.Pedidos
 {
     public class PedidoViewModel
     {
-        public int Id { get; set; }
-
         public int NumeroPedido { get; set; }
 
         public int IdCliente { get; set; }

@@ -20,7 +20,16 @@ namespace Logstore.Api.Models.Mappings.Pizza
 
             CreateMap<Logstore.Domain.Entities.Pizza, PizzaViewModel>();
 
-            CreateMap<PizzaViewModel, Logstore.Domain.Entities.Pizza>();
+            CreateMap<PizzaViewModel, Logstore.Domain.Entities.Pizza>()
+                .ForMember(x => x.Pedido, opt => opt.Ignore());
+
+            CreateMap<InputPizzaPedidoModel, Logstore.Domain.Entities.Pizza>()
+                .ForMember(x => x.Id, opt => opt.Ignore())
+                .ForMember(x => x.IdPedido, opt => opt.Ignore())
+                .ForMember(x => x.Pedido, opt => opt.Ignore())
+                .ForMember(x => x.PrecoTotal, opt => opt.Ignore())
+                .ForMember(x => x.Sabor1, opt => opt.Ignore())
+                .ForMember(x => x.Sabor2, opt => opt.Ignore());
         }
     }
 }
