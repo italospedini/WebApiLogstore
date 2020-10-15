@@ -1,9 +1,0 @@
-D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\bin\Debug\netcoreapp3.1\Logstore.Infra.deps.json
-D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\bin\Debug\netcoreapp3.1\Logstore.Infra.dll
-D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\bin\Debug\netcoreapp3.1\Logstore.Infra.pdb
-D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\obj\Debug\netcoreapp3.1\Logstore.Infra.csprojAssemblyReference.cache
-D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\obj\Debug\netcoreapp3.1\Logstore.Infra.AssemblyInfoInputs.cache
-D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\obj\Debug\netcoreapp3.1\Logstore.Infra.AssemblyInfo.cs
-D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\obj\Debug\netcoreapp3.1\Logstore.Infra.csproj.CoreCompileInputs.cache
-D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\obj\Debug\netcoreapp3.1\Logstore.Infra.dll
-D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Infra\obj\Debug\netcoreapp3.1\Logstore.Infra.pdb

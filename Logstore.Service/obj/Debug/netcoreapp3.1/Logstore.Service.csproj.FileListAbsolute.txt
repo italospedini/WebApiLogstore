@@ -1,9 +1,0 @@
-D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\bin\Debug\netcoreapp3.1\Logstore.Service.deps.json
-D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\bin\Debug\netcoreapp3.1\Logstore.Service.dll
-D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\bin\Debug\netcoreapp3.1\Logstore.Service.pdb
-D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\obj\Debug\netcoreapp3.1\Logstore.Service.csprojAssemblyReference.cache
-D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\obj\Debug\netcoreapp3.1\Logstore.Service.AssemblyInfoInputs.cache
-D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\obj\Debug\netcoreapp3.1\Logstore.Service.AssemblyInfo.cs
-D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\obj\Debug\netcoreapp3.1\Logstore.Service.csproj.CoreCompileInputs.cache
-D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\obj\Debug\netcoreapp3.1\Logstore.Service.dll
-D:\3. PROJETOS\WebApiLogStore\WebApiLogstore\Logstore.Service\obj\Debug\netcoreapp3.1\Logstore.Service.pdb
