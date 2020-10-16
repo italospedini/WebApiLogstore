@@ -9,6 +9,7 @@ using Logstore.Service.Interfaces.Pedidos;
 using Logstore.Service.Interfaces.Pizza;
 using Logstore.Service.Services.Pedidos;
 using Logstore.Service.Services.Pizza;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -31,7 +32,7 @@ namespace Logstore.Crosscutting.DI
             services.AddScoped(typeof(IPedidoRepository), typeof(PedidoRepository));
             services.AddScoped(typeof(IClienteRepository), typeof(ClienteRepository));
 
-            string AppPath = Environment.CurrentDirectory;
+            string AppPath = Environment.CurrentDirectory.Split("Logstore.")[0];
             string SqliteDbPath = Path.Combine(Directory.GetParent(AppPath).FullName, "Logstore.Infra", "LogstoreAPI.db");
 
             services.AddDbContext<LogstoreDbContext>(options => options.UseSqlite(string.Concat("Data Source = ", SqliteDbPath)));

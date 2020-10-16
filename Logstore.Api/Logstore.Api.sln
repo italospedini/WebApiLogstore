@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logstore.Infra", "..\Logsto
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logstore.Service", "..\Logstore.Service\Logstore.Service.csproj", "{672AE39F-C2BC-4667-90B7-3827D2547701}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logstore.Crosscutting", "..\Logstore.Crosscutting\Logstore.Crosscutting.csproj", "{456E5719-1A68-4CCB-89E7-564DB32F89AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logstore.Crosscutting", "..\Logstore.Crosscutting\Logstore.Crosscutting.csproj", "{456E5719-1A68-4CCB-89E7-564DB32F89AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logstore.Tests", "..\Logstore.Tests\Logstore.Tests.csproj", "{967954CA-9C5A-432E-A8E3-D1968DD6F55B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{456E5719-1A68-4CCB-89E7-564DB32F89AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{456E5719-1A68-4CCB-89E7-564DB32F89AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{456E5719-1A68-4CCB-89E7-564DB32F89AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{967954CA-9C5A-432E-A8E3-D1968DD6F55B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{967954CA-9C5A-432E-A8E3-D1968DD6F55B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{967954CA-9C5A-432E-A8E3-D1968DD6F55B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{967954CA-9C5A-432E-A8E3-D1968DD6F55B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

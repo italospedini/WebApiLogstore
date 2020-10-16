@@ -30,6 +30,13 @@ namespace Logstore.Domain.Entities
             
         }
 
+        public Pedido(int idCliente, ICollection<Pizza> pizzas, string enderecoEntrega)
+        {
+            this.IdCliente = IdCliente;
+            this.Pizzas = pizzas;
+            this.Endereco_Entrega = enderecoEntrega;
+        }
+
         public bool PedidoValido() => this.Pizzas.Count > 0 && this.Pizzas.Count <= 10;
 
         public void CalcularValorTotal(ICollection<PizzaSabores> pizzas)

@@ -30,5 +30,13 @@ namespace Logstore.Domain.Entities
             this.Disponivel = true;
             this.Ativa = true;
         }
+
+        public PizzaSabores(string NomeSabor, decimal PrecoUnitario, bool Disponivel, bool Ativa)
+        {
+            this.NomeSabor = NomeSabor;
+            this.PrecoUnitario = PrecoUnitario;
+            this.Disponivel = Disponivel;
+            this.Ativa = Ativa;
+        }
     }
 }

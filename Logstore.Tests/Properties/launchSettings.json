@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Logstore.Tests": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_Environment": "Development"
+      },
+      "remoteDebugEnabled": false
+    }
+  }
+}
