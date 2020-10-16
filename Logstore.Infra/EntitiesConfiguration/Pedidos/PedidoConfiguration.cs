@@ -19,6 +19,7 @@ namespace Logstore.Infra.EntitiesConfiguration.Pedidos
             builder.Property(x => x.IdCliente).IsRequired();
             builder.Property(x => x.Data_Pedido).IsRequired();
             builder.Property(x => x.ValorTotalPedido).IsRequired();
+            builder.Ignore(x => x.Endereco_Entrega);
 
             builder.HasOne(x => x.Cliente).WithMany().HasForeignKey(x => x.IdCliente);
 
