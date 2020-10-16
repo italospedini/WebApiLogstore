@@ -39,8 +39,6 @@ namespace Logstore.Infra.Migrations
 
                     b.Property<DateTime>("Data_Pedido");
 
-                    b.Property<string>("Endereco_Entrega");
-
                     b.Property<int>("IdCliente");
 
                     b.Property<decimal>("ValorTotalPedido");

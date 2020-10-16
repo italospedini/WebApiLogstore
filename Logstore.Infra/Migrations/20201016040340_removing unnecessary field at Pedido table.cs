@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Logstore.Infra.Migrations
 {
-    public partial class PedidoeCliente : Migration
+    public partial class removingunnecessaryfieldatPedidotable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -31,8 +31,7 @@ namespace Logstore.Infra.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     IdCliente = table.Column<int>(nullable: false),
                     Data_Pedido = table.Column<DateTime>(nullable: false),
-                    ValorTotalPedido = table.Column<decimal>(nullable: false),
-                    Endereco_Entrega = table.Column<string>(nullable: true)
+                    ValorTotalPedido = table.Column<decimal>(nullable: false)
                 },
                 constraints: table =>
                 {

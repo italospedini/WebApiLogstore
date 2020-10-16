@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Logstore.Infra.Migrations
 {
     [DbContext(typeof(LogstoreDbContext))]
-    [Migration("20201015183931_Pedido e Cliente")]
-    partial class PedidoeCliente
+    [Migration("20201016040340_removing unnecessary field at Pedido table")]
+    partial class removingunnecessaryfieldatPedidotable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -40,8 +40,6 @@ namespace Logstore.Infra.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<DateTime>("Data_Pedido");
-
-                    b.Property<string>("Endereco_Entrega");
 
                     b.Property<int>("IdCliente");
 
